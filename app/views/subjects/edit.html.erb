@@ -1,0 +1,14 @@
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link')%>
+
+<div class="subject edit">
+	<h2>Update</h2>
+	<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f|%>
+	
+		<%= render(:partial => "form", :locals => {:f => f}) %>
+		
+		<div class=" ">
+				<%= submit_tag("Update Subject", :class => 'btn-large') %>
+				<i class="icon-search"></i>
+	</div>
+		<% end %>
+</div>
